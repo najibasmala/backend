@@ -12,7 +12,9 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 require("dotenv").config();
 const morgan = require("morgan");
-app.use(cors({ credentials: true, origin: "https://elearning-w.onrender.com" }));
+app.use(
+  cors({ credentials: true, origin: "https://elearning-w.onrender.com" })
+);
 app.use(bodyParser.json());
 
 mongoose
@@ -44,11 +46,11 @@ app.use("/files", Files);
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 // });
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, "build")));
 
-app.get('/*', function(req,res) {
-		res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-app.listen(5000, () => {
+app.listen("https://elearning-w-api.onrender.com", () => {
   console.log("Server started on 5000");
 });
