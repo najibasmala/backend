@@ -12,7 +12,7 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 require("dotenv").config();
 const morgan = require("morgan");
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: "https://elearning-w.onrender.com" }));
 app.use(bodyParser.json());
 
 mongoose
